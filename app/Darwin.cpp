@@ -16,16 +16,16 @@ using namespace std;
 
 void helpUser(const string & argument)
 {
-	cout << "DARWIN - Program symulujacy ewolucje populacji osobnikow." << endl;
-	cout << "Program uruchamiany jest z linii polecen z wykorzystaniem nastepujacych przelacznikow:" << endl;
-	cout << "	-i	plik wejsciowy z populacja" << endl;
-	cout << "	-o	plik wyjsciowy z populacja" << endl;
-	cout << "	-w	wspolczynnik wymierania z zakresu <0, 1>" << endl;
-	cout << "	-r	wspolczynnik rozmnazania z zakresu <0, 1>, ale wiekszy badz rowny wspolczynnikowi wymierania" << endl;
-	cout << "	-p	liczba pokolen" << endl;
-	cout << "	-k	liczba krzyzujacych sie par" << endl;
-	cout << "Przykladowe wywolanie programu:" << endl;
-	cout << argument << " -i wejscie.txt -o wyjscie.txt -w 0.43 -r 0.74 -p 421 -k 23" << endl;
+	cout << "DARWIN - Simple population evolution simulator." << endl;
+	cout << "The program is run form the command line. I uses following switches:" << endl;
+	cout << "	-i	input file with population" << endl;
+	cout << "	-o	output file with population" << endl;
+	cout << "	-w	deathFactor from the range <0, 1>" << endl;
+	cout << "	-r	cloneFactor form the range <0, 1>, but greater than or equal to deathFactor" << endl;
+	cout << "	-p	number of generations" << endl;
+	cout << "	-k	number of crossing pairs" << endl;
+	cout << "Example:" << endl;
+	cout << argument << " -i input.txt -o output.txt -w 0.43 -r 0.74 -p 12 -k 8" << endl;
 }
 
 void readArguments(int argNumber, char ** arguments, string & inputDataName, string & outputDataName, Factors & factors)
@@ -86,7 +86,7 @@ void readArguments(int argNumber, char ** arguments, string & inputDataName, str
 			}
 			if (arguments[i] == HELP_LABEL)
 			{
-				string end = "Pomoc dla uzytkownika:";
+				string end = "Help:";
 				throw end;
 			}
 		}
@@ -97,49 +97,49 @@ void readArguments(int argNumber, char ** arguments, string & inputDataName, str
 	}
 	catch (exception e)
 	{
-		string error = "Blednie podane argumenty.";
+		string error = "Wrong switches.";
 		throw error;
 	}
 
 	if (arguments[argNumber - 1] == HELP_LABEL)
 	{
-		string end = "Pomoc dla uzytkownika:";
+		string end = "Help:";
 		throw end;
 	}
 
 	if (argNumber != rightNumberOfArguments)
 	{
-		string error = "Zla liczba argumentow.";
+		string error = "Wrong number of switches.";
 		throw error;
 	}
 
 	if (factors.deathFactor > factors.cloneFactor)
 	{
-		string error = "Wspolczynnik wymierania wiekszy od wspolczynnika rozmnazania.";
+		string error = "deathFactor is greater than cloneFactor.";
 		throw error;
 	}
 
 	if (factors.deathFactor > 1 || factors.deathFactor < 0)
 	{
-		string error = "Wspolczynnik wymierania nie nalezy do przedzialu <0, 1>.";
+		string error = "deathFactor is not from th range <0, 1>.";
 		throw error;
 	}
 
 	if (factors.cloneFactor > 1 || factors.cloneFactor < 0)
 	{
-		string error = "Wspolczynnik klonowania nie nalezy do przedzialu <0, 1>.";
+		string error = "cloneFactor is not from th range <0, 1>.";
 		throw error;
 	}
 
 	if (factors.generationsNumber < 0)
 	{
-		string error = "Liczba pokolen powinna byc nieujemna.";
+		string error = "Number of generations should not be negative.";
 		throw error;
 	}
 
 	if (factors.crossingNumber < 0)
 	{
-		string error = "Liczba krzyzowan powinna byc nieujemna.";
+		string error = "Number of crossing pairs should not be negative.";
 		throw error;
 	}
 
@@ -151,7 +151,7 @@ void readArguments(int argNumber, char ** arguments, string & inputDataName, str
 		}
 		else
 		{
-			string error = "Wystapil blad podczas czytania argumentow.";
+			string error = "Error with reading switches.";
 			throw error;
 		}
 	}
@@ -180,14 +180,14 @@ void getInput(const string & dataName, Population & population)
 		}
 		else
 		{
-			string error = "Nie udalo sie otworzyc pliku " + dataName;
+			string error = "Cannot open the file " + dataName;
 			throw error;
 		}
 		inputData.close();
 	}
 	catch (exception e)
 	{
-		string error = "Wystapil nieznany blad zwiazany z plikiem " + dataName;
+		string error = "Error with the file " + dataName;
 		throw error;
 	}
 }
@@ -221,7 +221,7 @@ void saveOutput(const string & dataName, const Population & population)
 	}
 	catch (exception e)
 	{
-		string error = "Wystapil problem podczas zapisu do pliku " + dataName;
+		string error = "Error with saving data to " + dataName;
 		throw error;
 	}
 }

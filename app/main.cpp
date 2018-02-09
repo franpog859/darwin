@@ -24,7 +24,7 @@ int main(int argNumber, char ** arguments)
 		population.die();
 		population.die(); //Second one is to check if everything works well.
 
-		cout << "Program zakonczony pomyslnie." << endl;
+		cout << "Program finished correctly." << endl;
 	}
 	catch (string & e)
 	{
@@ -33,7 +33,7 @@ int main(int argNumber, char ** arguments)
 	}
 	catch (exception & e)
 	{
-		cerr << "Wystapil nieznany blad." << endl;
+		cerr << "Unknown error." << endl;
 		helpUser(arguments[0]);
 	}
 	

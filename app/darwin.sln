@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "darwin", "darwin\darwin.vcxproj", "{40A0C974-8E5E-4E59-853E-D2E7CD0DBF28}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "darwin", "darwin.vcxproj", "{40A0C974-8E5E-4E59-853E-D2E7CD0DBF28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B3EC392E-F251-4F74-9F58-114952C93805}
+		SolutionGuid = {CC0ACF24-9D88-460E-93D9-0B93627BC597}
 	EndGlobalSection
 EndGlobal
