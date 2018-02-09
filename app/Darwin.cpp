@@ -192,7 +192,7 @@ void getInput(const string & dataName, Population & population)
 	}
 }
 
-void passTheGeneration(const Factors & factors, Population & population)
+void passTheGenerations(const Factors & factors, Population & population)
 {
 	for (int i = 0; i < factors.generationsNumber; i++)
 	{

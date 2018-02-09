@@ -16,10 +16,9 @@ int main(int argNumber, char ** arguments)
 
 		readArguments(argNumber, arguments, inputDataName, outputDataName, factors);
 		getInput(inputDataName, population);
-		for (int i = 0; i < factors.generationsNumber; i++)
-		{
-			passTheGeneration(factors, population);
-		}
+		
+		passTheGenerations(factors, population);
+
 		saveOutput(outputDataName, population);
 		
 		population.die();

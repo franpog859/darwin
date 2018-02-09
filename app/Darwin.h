@@ -12,7 +12,7 @@ void readArguments(int argNumber, char ** arguments, string & inputDataName, str
 
 void getInput(const string & dataName, Population & population);
 
-void passTheGeneration(const Factors & factors, Population & population);
+void passTheGenerations(const Factors & factors, Population & population);
 
 void saveOutput(const string & dataName, const Population & population);
 
