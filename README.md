@@ -22,10 +22,10 @@
 1. Clone this repository.
 2. `cd app`
 3. `make`
-4. `main -i ../dat/test19.txt -o ../dat/output.txt -w 0.68 -r 0.89 -p 12 -k 8`
+4. `./main -i ../dat/test19.txt -o ../dat/output.txt -w 0.68 -r 0.89 -p 11 -k 8`
 
 The last line is an example of the *run* command.
 
 ## TODO
-- [ ] update makefile
+- [x] update makefile
 - [ ] clean code
