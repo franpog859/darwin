@@ -26,6 +26,10 @@
 
 The last line is an example of the *run* command.
 
-## TODO
-- [x] update makefile
-- [ ] clean code
+## Things to implement in the future:
+- [ ] Make it full object oriented.
+- [ ] Implement some new function as: 
+  - [ ] noahsArk - Kills everyone except two the best adapted people.
+  - [ ] plague - Increases death and clone factors killing most people and making multiplication almost impossible.
+  - [ ] mutation - Randomly changes some part of chromosomes without hybridization.
+  - [ ] climatChange - Changes the fitFunction and thus environment.
