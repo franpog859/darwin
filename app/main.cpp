@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include <string>
 #include <iostream>
 #include "Factors.h"
@@ -21,8 +20,7 @@ int main(int argNumber, char ** arguments)
 
 		saveOutput(outputDataName, population);
 		
-		population.die();
-		population.die(); //Second one is to check if everything works well.
+		clearPopulation(population);
 
 		cout << "Program finished correctly." << endl;
 	}

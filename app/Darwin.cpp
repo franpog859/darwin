@@ -225,3 +225,10 @@ void saveOutput(const string & dataName, const Population & population)
 		throw error;
 	}
 }
+
+void clearPopulation(Population & population)
+{
+	//It is only to proove that there is no leaks.
+	population.die();
+	population.die(); //Second one is to check if everything works well.
+}

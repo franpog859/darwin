@@ -16,5 +16,7 @@ void passTheGenerations(const Factors & factors, Population & population);
 
 void saveOutput(const string & dataName, const Population & population);
 
+void clearPopulation(Population & population);
+
 #endif
 
