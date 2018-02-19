@@ -2,11 +2,11 @@
 
 ## Description
 
-> This is a simple population evolution simulator. A given start population goes through a number of generations. After all changes we can see the finish population. People try to fit in the environment. Some of them die, some of them clone, some of them reproduce. Every event depends on the given environment.
+This is a simple population evolution simulator. A given start population goes through a number of generations. After all changes we can see the finish population. People try to fit in the environment. Some of them die, some of them clone, some of them reproduce. Every event depends on the given environment.
 
-> This project is a documentation of my learning process about dynamic data structures. It is also an introduction to classes and object oriented programming.
+This project is a documentation of my learning process about dynamic data structures. It is also an introduction to classes and object oriented programming.
 
-> If you can see some drama, some obvious bug or some bad habit tell me! I would be very glad if you do. It is all about learning.
+If you can see some drama, some obvious bug or some bad habit tell me! I would be very glad if you do. It is all about learning.
 
 ## Example of start population
 
